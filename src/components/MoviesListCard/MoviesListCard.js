@@ -1,7 +1,7 @@
 import {NavLink} from "react-router-dom";
+import {baseUrlImg} from "../../configs";
 
 import css from './MovieListCard.module.css'
-import {baseUrlImg} from "../../configs";
 
 export default function MoviesListCard({movie}) {
 

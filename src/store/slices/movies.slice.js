@@ -1,8 +1,6 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 import {movieService} from "../../services/movies.service";
 
-
-
 const initialState = {
     movies: [],
     movieDetails: null,
@@ -104,4 +102,4 @@ const movieReducer = movieSlice.reducer;
 
 export default movieReducer;
 
-export const {setCurrentPage, setCurrentPageGenres} = movieSlice.actions;
+export const {setCurrentPage} = movieSlice.actions;

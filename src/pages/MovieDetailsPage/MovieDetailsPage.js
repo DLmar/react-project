@@ -14,9 +14,7 @@ import {getMovieById} from "../../store/slices/movies.slice";
 export default function MovieDetailsPage() {
 
     const {movieDetails, status, error} = useSelector(state => state['movieReducer']);
-
     const {id} = useParams();
-
     const dispatch = useDispatch();
 
     useEffect(() => {
