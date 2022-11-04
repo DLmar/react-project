@@ -15,3 +15,8 @@ export default function Companies({company: {logo_path, name, origin_country}}) 
         </div>
     );
 }
+
+
+
+
+export {Companies};

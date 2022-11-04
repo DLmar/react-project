@@ -44,6 +44,14 @@ export const getMoviesByGenres = createAsyncThunk(
     }
 )
 
+export const getMoviesByName = createAsyncThunk(
+    'movieSlice/getMoviesByName',
+    async ({currentPage, name},{dispatch}) => {
+        const data = await movieService.getMoviesByName(currentPage, name)
+        dispatch(setMoviesByName(data))
+    }
+)
+
 const movieSlice = createSlice({
     name: 'movieSlice',
     initialState,
@@ -53,7 +61,10 @@ const movieSlice = createSlice({
         },
         setCurrentPageGenres: (state, action) => {
             state.currentPageGenres = action.payload
-        }
+        },
+        setMoviesByName: ((state, action) => {
+            state.arrFilmsByName = action.payload;
+        })
     },
     extraReducers: {
         [getAllMovies.pending]: (state) => {
@@ -102,4 +113,4 @@ const movieReducer = movieSlice.reducer;
 
 export default movieReducer;
 
-export const {setCurrentPage} = movieSlice.actions;
+export const {setCurrentPage,setMoviesByName} = movieSlice.actions;

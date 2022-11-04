@@ -1,6 +1,10 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
 .outlet {
     background-color: darkred;
-    height: calc(100vh - 90px);
     overflow: hidden;
     overflow-y: auto;
 }

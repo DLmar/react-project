@@ -4,7 +4,7 @@ import {useEffect} from "react";
 import css from './MoviesList.module.css';
 
 import MoviesListCard from "../MoviesListCard/MoviesListCard";
-import {getAllMovies, setCurrentPage} from "../../store/slices/movies.slice";
+import {getAllMovies, setCurrentPage} from "../../store";
 
 export default function MoviesList() {
 

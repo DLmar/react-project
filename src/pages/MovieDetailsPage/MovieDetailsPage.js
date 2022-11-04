@@ -9,7 +9,7 @@ import MovieDetailsGenres from "../../components/MovieDetailsGenres/MovieDetails
 import Companies from "../../components/Companies/Companies";
 
 import {baseUrlImg} from "../../configs";
-import {getMovieById} from "../../store/slices/movies.slice";
+import {getMovieById} from "../../store";
 
 export default function MovieDetailsPage() {
 
